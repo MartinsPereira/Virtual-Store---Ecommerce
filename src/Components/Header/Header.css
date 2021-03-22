@@ -1,0 +1,71 @@
+.header-redes{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.header-redes > span{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .8px;
+}
+.header-redes > div{
+  display: flex;
+  gap: 16px;
+}
+.header-central{
+  display: flex;
+  align-items: center;
+}
+.opcoes-header-central{
+  display: flex;
+  flex: 1;
+  gap: 18px;
+  align-items: baseline;
+}
+.opcoes-header-central > div{
+  cursor: pointer;
+}
+.logo-header{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.header-search-input{
+  flex: 1;
+}
+.header-search-input > div {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-search-input > div > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(30,37,43);
+}
+.header-search-input > div > div input{
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+}
+.header-search-input > div > div i{
+  margin: 0 7px;
+  cursor: pointer;
+}
+.header-menu{
+  border-top: 1px solid rgb(21,26,31);
+  border-bottom: 1px solid rgb(21,26,31);
+  padding: 13px;
+}
+.header-menu nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.header-menu nav ul li a{
+  text-transform: uppercase;
+  color: rgb(21,26,31);
+  font-weight: bold;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,22 @@
+.slide-imgs{
+  display: grid;
+  grid-template:
+		"foto1 foto1 foto2 foto3" 259px  
+		"foto1 foto1 foto4 foto4" 259px
+    / 300px 300px 300px 300px;
+}
+.slide-imgs li:nth-child(1){grid-area: foto1;}
+.slide-imgs li:nth-child(2){grid-area: foto2;}
+.slide-imgs li:nth-child(3){grid-area: foto3;}
+.slide-imgs li:nth-child(4){grid-area: foto4;}
+.slide-imgs li{
+  margin: 8px;
+}
+.slide-imgs li{
+  cursor: pointer;
+}
+.slide-imgs li img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

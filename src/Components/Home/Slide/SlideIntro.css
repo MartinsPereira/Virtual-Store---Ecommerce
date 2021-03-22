@@ -1,0 +1,36 @@
+.slide-intro{
+  margin: 17px 0;
+}
+.slide-intro > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.slide-img-overflow{
+  max-width: 1200px;
+}
+.slide-img-overflow > div{
+  display: flex;
+  overflow: hidden;
+}
+.button-prev-slide,.button-next-slide{
+  position: relative;
+}
+.button-prev-slide,.button-next-slide{
+  width: 33px;
+  height: 33px;
+}
+.button-prev-slide > div, .button-next-slide > div{
+  width: 33px;
+  height: 33px;
+  border: 1px solid rgb(30,37,40);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+.button-prev-slide > div{right: 15px;}
+.button-next-slide > div{left: 15px;}
