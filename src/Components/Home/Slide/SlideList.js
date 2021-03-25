@@ -3,24 +3,43 @@ import { Link } from 'react-router-dom'
 import './SlideList.css'
 
 const SlideList = ({title, dataList}) => {
+  const [active,setActive] = React.useState(0)
+  const [position, setPosition] = React.useState(0)
+  const SlideRef = React.useRef()
+
+  React.useEffect(() => {
+    const width = (parseInt(getComputedStyle(SlideRef.current).marginRight) * 2) + SlideRef.current.offsetWidth
+    setPosition(-(width * active))
+  },[active])
+
+  function slidePrev(){
+    if(active > 0) setActive(active - 1)
+    else setActive(dataList.length - 1)
+  }
+  
+  function slideNext(){
+    if(active < dataList.length - 1) setActive(active + 1)
+    else setActive(0)
+  }
+
   return (
     <section className="UlSlideList">
       <div className="container">
         <header className="header-slideList">
           <h2>{title}</h2>
           <div>
-            <div className="button-prev-slide">
+            <div onClick={slidePrev} className="button-prev-slide">
               <div>◁</div>
             </div>
-            <div className="button-next-slide">
+            <div onClick={slideNext} className="button-next-slide">
               <div>▷</div>
             </div>
           </div>
         </header>
         <div className="ul-slideList">
-          <ul>
+          <ul style={{transform: `translateX(${position}px)`}}>
             {dataList.map(i => (
-              <li className="li-slideList">
+              <li className="li-slideList"  ref={SlideRef}>
                 <Link to="/">
                   <div>
                     <img src={i.imgProd} alt=""/>

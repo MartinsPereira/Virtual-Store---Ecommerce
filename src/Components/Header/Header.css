@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
+  gap: 10px;
 }
 .header-redes > span{
   font-size: 14px;
@@ -15,6 +16,7 @@
 .header-central{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .opcoes-header-central{
   display: flex;
@@ -58,6 +60,13 @@
   border-bottom: 1px solid rgb(21,26,31);
   padding: 13px;
 }
+.header-menu nav{
+  overflow: hidden;
+  transition: .3s ease-in-out;
+}
+.header-menu nav.active{
+  height: 250px;
+}
 .header-menu nav ul{
   display: flex;
   justify-content: center;
@@ -68,4 +77,88 @@
   color: rgb(21,26,31);
   font-weight: bold;
   letter-spacing: 1px;
+}
+.hamburger-button{
+  height: 24px;
+  width: 28px;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+.hamburger-button > div{
+  height: 4px;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  background: rgb(30,37,43);
+  transition: .5s ease-in-out;
+}
+.hamburger-button > div::after,.hamburger-button > div::before{
+  background: rgb(30,37,43);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: .5s ease-in-out;
+}
+.hamburger-button > div::before{top: -10px;}
+.hamburger-button > div::after{bottom: -10px;}
+.hamburger-button.active > div::before{
+  transform: rotate(90deg);
+  top: 0;
+}
+.hamburger-button.active > div::after{
+  transform: rotate(90deg);
+  bottom: 0;
+}
+.hamburger-button.active > div{
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px){
+  .hamburger-button{
+    display: block;
+  }
+  .header-menu nav{
+    height: 0px;
+  }
+  .header-menu nav ul{
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px 0;
+  }
+  .header-menu nav ul li::after{
+    content: "";
+    height: 3px;
+    width: 30px;
+    display: block;
+    background: rgb(81, 90, 99);
+  }
+  .header-central{
+    padding: 10px 0;
+  }
+  .opcoes-header-central{
+    order: 1;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  .logo-header{
+    order: 0;
+    margin-left: 15px;
+  }
+  .logo-header{
+    justify-content: flex-start;
+  }
+  .header-search-input{
+    flex: 100%;
+    order: 3;
+  }
+  .header-search-input > div{
+    justify-content: center;
+  }
+  .header-search-input > div > div{
+    width: 90%;
+  }
 }

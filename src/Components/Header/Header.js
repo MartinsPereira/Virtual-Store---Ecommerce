@@ -10,6 +10,12 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
+  const [hamburger, activeHamburber] = React.useState(false)
+
+  function clickHamburger(){
+    activeHamburber(!hamburger)
+  }
+
   return (
     <header className="header">
       <div className="container">
@@ -40,7 +46,10 @@ const Header = () => {
         </div>
       </div>
       <div className="header-menu">
-          <nav>
+          <div onClick={clickHamburger} className={hamburger ? "hamburger-button active" : 'hamburger-button'}>
+            <div></div>
+          </div>
+          <nav className={hamburger ? "active" : ''}>
             <ul>
               <li><Link to="/">Masculino</Link></li>
               <li><Link to="/">Feminino</Link></li>

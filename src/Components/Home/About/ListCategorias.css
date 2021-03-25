@@ -4,6 +4,8 @@
 .categorias-produto > ul{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .categorias-produto > ul li{
   width: 306px;
@@ -14,6 +16,7 @@
 .categorias-produto > ul li a > div{
   background: rgba(43,43,43,71%);
   filter: brightness(0.6) opacity(1);
+  height: 100%;
 }
 .categorias-produto > ul li img{
   object-fit: cover;
@@ -35,3 +38,4 @@
   font-size: 26px;
   font-family: 'Segoe UI', "Roboto";
 }
+

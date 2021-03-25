@@ -2,20 +2,23 @@
   background: rgb(235,235,235);
   padding: 35px 0;
 }
+.sectionPromocao .header-slideList{
+  justify-content: flex-end;
+}
 .divPromocao{
   display: flex;
-  justify-content: space-between;
-}
-.divPromocao .ul-slideList{
-  width: 956px;
+  gap: 11px;
+  flex-wrap: wrap;
 }
 .titlePromocao{
   display: flex;
   align-items: center;
 }
+.slidePromo-list{
+  max-width: 100%;
+}
 .titlePromocao h2{
   font-family: "Poppins","Roboto";
   font-size: 29px;
   font-weight: 400;
-  width: 195px;
 }

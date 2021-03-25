@@ -7,7 +7,7 @@
 }
 .header-slideList > div{
   display: flex;
-  margin-right: 17px;
+  gap: 15px;
 }
 .header-slideList > h2{
   font-size: 22px;
@@ -24,13 +24,17 @@
 .ul-slideList > ul{
   display: flex;
   width: max-content;
-  gap: 16px;
+  transition: .4s ease-in-out;
 }
 .li-slideList{
-  width: 227px;
+  width: 226px;
   height: 298px;
+  margin: 0 8px;
 }
-.li-slideList a > div{
+.li-slideList:nth-child(1){
+  margin: 0 8px 0 0 ;
+}
+.li-slideList a > div:nth-child(1){
   width: 226px;
   height: 258px;
 }
