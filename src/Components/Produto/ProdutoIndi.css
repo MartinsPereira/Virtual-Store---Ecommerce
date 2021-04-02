@@ -13,6 +13,7 @@
 .produto-info-imagens ul li{
   width: 65px;
   height: 62px;
+  cursor: pointer;
 }
 .produto-info-imagens ul li img{
   width: 100%;
@@ -31,11 +32,13 @@
 .nomeProd{
   font-size: 28px;
   letter-spacing: 1px;
+  color: rgb(34,42,48);
 }
 .precoProd{
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
+  color: rgb(51,49,58);
 }
 .tamanhoProd select{
   height: 30px;
@@ -80,4 +83,134 @@
   outline: none;
   background: rgb(21,26,31);
   cursor: pointer;
+}
+
+.produto-desc{
+  margin-top: 70px;
+}
+.title-prod-indi{
+  font-family: "Poppins","Roboto";
+  font-size: 22px;
+  letter-spacing: 1px;
+  position: relative;
+  color: rgb(30,37,43);
+}
+.title-prod-indi::after{
+  content: "";
+  height: 3px;
+  width: 30px;
+  background: rgb(212,212,212);
+  position: absolute;
+  top: 16px;
+  margin-left: 12px;
+}
+.produto-desc-p{
+  margin-top: 5px;
+}
+.produto-desc-p p{
+  font-family: "Poppins","Roboto";
+  font-size: 16px;
+  color: rgb(78,87,96);
+  text-indent: 40px;
+}
+.produto-comentarios{
+  margin-top: 35px;
+}
+.produto-comentarios > div {
+  margin-left: 12px;
+  margin-top: 20px;
+}
+.produto-comentarios > div ul{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.nome-comentario{
+  display: flex;
+  justify-content: space-between;
+}
+.nome-comentario > div{
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.separador-nome-comentario{
+  color: rgb(193,193,193);
+}
+.comentario-produto-data{
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .8px;
+  color: rgb(162,162,162);
+}
+.p-comentario p{
+  font-size: 16px;
+  font-family: "Poppins", "Roboto";
+  letter-spacing: .7px;
+  color: rgb(78,87,86);
+  margin-top: 10px;
+  margin-left: 18px;
+}
+.name-product-responsive{
+  margin: 0 0 15px 0;
+}
+.name-product-responsive{
+  display: none;
+}
+.name-product-responsive .precoProd{
+  margin-top: 10px;
+  display: block;
+}
+
+@media (max-width: 768px){
+  .name-product-responsive{
+    display: block;
+  }
+  .produto-info{
+    flex-direction: column;
+  }
+  .produto-info-informacoes .nomeProd,.produto-info-informacoes .precoProd{
+    display: none;
+  } 
+  .produto-info-informacoes .tamanhoProd{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px){
+  .title-prod-indi{
+    font-size: 16px;
+  }
+  .nomeProd{
+    font-size: 22px;
+  }
+  .precoProd{
+    font-size: 19px;
+  }
+  .title-prod-indi::after{
+    top: 13px;
+  }
+  .produto-info-informacoes{
+    margin-left: 0;
+  }
+  .tamanhoProd select{
+    width: 100%;
+  }
+  .produto-info-imagens {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .produto-info-imagens ul {
+    flex-direction: row; 
+    gap: 10px;
+    width: 100%;
+    overflow: scroll;
+  }
+  .produto-info-imagens ul li{
+    flex-shrink: 0;
+  }
+  .produto-info-imagens > div {
+    margin-left: 0px;
+  }
 }

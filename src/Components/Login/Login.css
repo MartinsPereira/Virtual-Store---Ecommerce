@@ -1,0 +1,24 @@
+.login-section > div{
+  display: flex;
+  gap: 50px;
+}
+.login-section-image{
+  background: url("../../Assets/img/fotos/pexels-dapo-abideen-6381767.jpg") no-repeat center;
+  background-size: cover;
+  height: 756px;
+  width: 52%;
+}
+
+@media (max-width: 640px){
+  .login-section > div{
+    justify-content: center;
+    padding: 10px;
+  }
+  .login-section-image{
+    display: none;
+  }
+  .login-form{
+    height: 600px;
+    width: 360px;
+  }
+}

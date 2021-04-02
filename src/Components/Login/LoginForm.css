@@ -1,0 +1,82 @@
+.login-form{
+  display: flex;
+  align-items: center;
+}
+.login-form > div{
+  width: 350px;
+  margin-right: 25px;
+}
+.login-form > div h2{
+  font-family: "Poppins","Roboto";
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: rgb(30,37,43);
+  position: relative;
+}
+.login-form > div h2::after{
+  content: "";
+  height: 5px;
+  width: 30px;
+  position: absolute;
+  background: rgb(30,37,43);
+  top: 26px;
+  margin-left: 12px;
+}
+.form-login label{
+  display: block;
+  font-family: "Poppins","Roboto";
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: rgb(30,37,43);
+}
+.form-login input{
+  font-family: "Poppins","Roboto";
+  width: 100%;
+  outline: none;
+  height: 40px;
+  border: 2px solid rgb(21,26,31);
+  padding: 0 10px;
+  letter-spacing: .5px;
+  font-size: 15px;
+}
+.form-button{
+  margin-top: 15px;
+}
+.form-button button{
+  padding: 8px 45px;
+  font-size: 18px;
+  font-family: "Poppins","Roboto";
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  background: rgb(30,37,43);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.login-opcao-cadastrar{
+  margin-top: 40px;
+}
+.login-opcao-cadastrar > p{
+  font-family: "Poppins","Roboto";
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: px;
+}
+.login-opcao-cadastrar > a{
+  color: rgb(6,68,121);
+  font-size: 16px;
+  font-family: "Poppins","Roboto";
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px){
+  .login-form > div{
+    margin-right: 0px;
+    width: 100%;
+  }
+}
